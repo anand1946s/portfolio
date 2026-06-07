@@ -7,7 +7,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 left-10 w-full z-50 px-20 py-10">
+    <nav className=" fixed top-0 left-10 w-full z-50 px-20 py-10">
       <div className="flex items-center justify-between">
 
         {/* Logo */}
