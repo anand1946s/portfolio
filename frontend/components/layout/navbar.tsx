@@ -1,17 +1,17 @@
 
 export default function Navbar() {
   const navItems = [
-    { name: "Skills", href: "#skills" },
+    { name: "Resume", href: "#skills" },
     { name: "Projects", href: "#projects" },
-    { name: "Contact Me", href: "#contact" },
+    { name: "Blogs", href: "#contact" },
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 px-20 py-10">
+    <nav className="fixed top-0 left-10 w-full z-50 px-20 py-10">
       <div className="flex items-center justify-between">
 
         {/* Logo */}
-        <div className="text-5xl font-bold">
+        <div className="text-5xl font-bold -ml-20">
           A
         </div>
 

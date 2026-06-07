@@ -9,9 +9,9 @@ export default function Hero() {
       id="hero"
       className="min-h-screen relative flex items-center justify-center"
     >
-      <Socials />
+      {/* <Socials /> */}
 
-      <div className="w-full max-w-6xl px-8 pl-48 pt-28">
+      <div className="w-full max-w-6xl px-8 pl-48">
 
         {/* Intro Row */}
         <div className="flex items-center gap-8 mb-10">
@@ -31,7 +31,7 @@ export default function Hero() {
             leading-none
           "
         >
-          AndyWong
+          Andy Wong
         </h1>
 
         {/* Subtitle */}
