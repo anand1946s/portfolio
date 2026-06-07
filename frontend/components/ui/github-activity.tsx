@@ -32,9 +32,7 @@ export default function GithubActivityWithLanguages() {
             GitHub Activity
         </p>
 
-        {/* <h4 className="mt-2 text-2xl font-semibold text-white">
-            Contribution Heatmap
-        </h4> */}
+        
 
         <div className="mt-6">
             <GithubCalendarComponent />
