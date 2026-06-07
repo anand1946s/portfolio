@@ -1,5 +1,5 @@
 import { Manrope } from "next/font/google";
-import GithubCalendarComponent from "@/components/ui/github-calender";
+import GithubActivityWithLanguages from "@/components/ui/github-activity";
 
 const theme = {
   dark: [
@@ -14,18 +14,7 @@ const theme = {
 function GithubHeatmap() {
   return (
     <section className="mt-12">
-      <p className="text-amber-500 text-sm uppercase tracking-[0.25em]">
-        GitHub Activity
-      </p>
-
-      <h3 className="mt-2 text-2xl font-semibold text-white">
-        Contribution Heatmap
-      </h3>
-
-      <div className="mt-6 rounded-xl border border-transparent bg-black/20 p-5">
-        <GithubCalendarComponent />
-        
-      </div>
+      <GithubActivityWithLanguages />
     </section>
   );
 }
@@ -99,17 +88,18 @@ return ( <section
 
 
     <div className="mt-10 grid gap-12 lg:grid-cols-3">
-      <div className="lg:col-span-2 flex flex-col">
-        <AboutContent />
-        <div className="mt-16">
-            <GithubHeatmap />
+        <div className="lg:col-span-2">
+            <AboutContent />
         </div>
-      </div>
 
-      <div className="lg:col-span-1 -mt-40 ">
-        <AboutCard />
-      </div>
-    </div>
+        <div className="lg:col-span-1 -mt-40">
+            <AboutCard />
+        </div>
+        </div>
+
+        <div className="mt-20">
+        <GithubHeatmap />
+        </div>
   </div>
 </section>
 

@@ -29,7 +29,7 @@ export default function GithubCalendarComponent() {
   username="anand1946s"
   theme={theme}
   colorScheme="dark"
-  blockSize={8}
+  blockSize={9}
   blockMargin={3}
   fontSize={12}
 />
