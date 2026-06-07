@@ -26,9 +26,12 @@ export default function GithubCalendarComponent() {
 
   return (
     <GitHubCalendar
-      username="anand1946s"
-      theme={theme}
-      colorScheme="dark"
-    />
+  username="anand1946s"
+  theme={theme}
+  colorScheme="dark"
+  blockSize={8}
+  blockMargin={3}
+  fontSize={12}
+/>
   );
 }

@@ -75,11 +75,12 @@ technical foundations. </p>
 
 
 function AboutCard() {
-return ( <aside className="flex flex-col items-center gap-5"> <div className="flex h-52 w-52 items-center justify-center rounded-full border border-gray-600 bg-gray-700/30"> <span className="text-4xl font-bold text-white">A</span> </div>
+return ( <aside className="flex flex-col items-center gap-5"> 
+  <div className="flex h-45 w-45 items-center justify-center rounded-full border border-gray-600 bg-gray-700/30"> <span className="text-4xl font-bold text-white">A</span> </div>
 
 
   <div className="text-center">
-    <p className="text-xl font-semibold">Anand S</p>
+    <p className="text-2xl font-semibold">Anand S</p>
     <p className="text-sm text-gray-400">
       Computer Science Student
     </p>
@@ -98,12 +99,14 @@ return ( <section
 
 
     <div className="mt-10 grid gap-12 lg:grid-cols-3">
-      <div className="lg:col-span-2">
+      <div className="lg:col-span-2 flex flex-col">
         <AboutContent />
-        <GithubHeatmap />
+        <div className="mt-16">
+            <GithubHeatmap />
+        </div>
       </div>
 
-      <div className="lg:col-span-1">
+      <div className="lg:col-span-1 -mt-40 ">
         <AboutCard />
       </div>
     </div>
