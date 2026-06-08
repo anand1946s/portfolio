@@ -7,7 +7,8 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className=" fixed top-0 left-10 w-full z-50 px-20 py-10">
+    <nav className=" fixed top-0 left-10 w-full z-10 px-20 py-3 backdrop-blur-md
+">
       <div className="flex items-center justify-between">
 
     

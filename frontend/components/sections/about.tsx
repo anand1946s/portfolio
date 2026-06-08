@@ -32,12 +32,21 @@ About </p>
   </h2>
 
   <p
-    className={`${manrope.className} mt-5 max-w-3xl text-[17px] leading-8 text-gray-300`}
+  className={`${manrope.className} mt-5 max-w-3xl text-[17px] leading-8 text-gray-300`}
+>
+  I’m a Computer Science student at{" "}
+  <a
+    href="https://cet.ac.in"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-amber-500 hover:text-amber-300 transition-colors"
   >
-    I’m a Computer Science student at CET Trivandrum passionate about
-    software development and problem solving. I enjoy building full-stack
-    applications and exploring the fundamentals of computer science.
-  </p>
+    CET Trivandrum
+  </a>{" "}
+  passionate about software development and problem solving. I enjoy
+  building full-stack applications and exploring the fundamentals of
+  computer science.
+</p>
 </header>
   );
 }

@@ -11,7 +11,7 @@ export default function Hero() {
     >
       {/* <Socials /> */}
 
-      <div className="w-full max-w-6xl px-8 pl-48">
+      <div className=" max-w-6xl px-8 ">
 
         {/* Intro Row */}
         <div className="flex items-center gap-8 mb-10">
@@ -25,13 +25,13 @@ export default function Hero() {
         {/* Name */}
         <h1
           className="
-            text-7xl
+            text-3xl
             md:text-9xl
             font-extrabold
             leading-none
           "
         >
-          Andy Wong
+          Anand
         </h1>
 
         {/* Subtitle */}
