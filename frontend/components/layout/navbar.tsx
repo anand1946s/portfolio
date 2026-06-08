@@ -55,26 +55,49 @@ export default function Navbar() {
 
         {/* Mobile Hamburger */}
           <button
-          className="md:hidden flex flex-col gap-1"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          <span className="w-6 h-0.5 bg-white block"></span>
-          <span className="w-6 h-0.5 bg-white block"></span>
-          <span className="w-6 h-0.5 bg-white block"></span>
-        </button>
+            className="
+              md:hidden
+              absolute
+              left-4
+              top-1/2
+              -translate-y-1/2
+              flex
+              flex-col
+              gap-1
+            "
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            <span className="w-6 h-0.5 bg-white block"></span>
+            <span className="w-6 h-0.5 bg-white block"></span>
+            <span className="w-6 h-0.5 bg-white block"></span>
+          </button>
       </div>
 
         {/* Mobile Dropdown (aligned to container) */}
         {menuOpen && (
-          <div className="md:hidden mt-3 w-full">
-            <div className="mx-auto max-w-6xl px-0 sm:px-6 md:px-8 lg:px-12">
-              <div className="flex flex-col items-end gap-3 text-sm uppercase tracking-[0.2em]">
+          <div className="md:hidden absolute top-full left-4 mt-3">
+            <div
+              className="
+                min-w-[180px]
+                rounded-xl
+                border
+                border-neutral-800
+                bg-black/80
+                backdrop-blur-lg
+                p-4
+                shadow-lg
+              "
+            >
+              <div className="flex flex-col items-start gap-4 text-sm uppercase tracking-[0.2em]">
                 {navItems.map((item) => (
                   <a
                     key={item.name}
                     href={item.href}
                     onClick={() => setMenuOpen(false)}
-                    className="hover:text-amber-500 transition-colors"
+                    className="
+                      hover:text-amber-500
+                      transition-colors
+                    "
                   >
                     {item.name}
                   </a>

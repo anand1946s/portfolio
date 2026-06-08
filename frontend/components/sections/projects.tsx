@@ -3,7 +3,7 @@ import Link from "next/link";
 
 
 const languageColors: Record<string, string> = {
-  TypeScript: "#3178C6",
+  TypeScript: "#F7DF1E",
   JavaScript: "#F7DF1E",
   Python: "#3776AB",
   Java: "#ED8B00",
