@@ -10,8 +10,8 @@ export default function Navbar() {
     <nav className=" fixed top-0 left-10 w-full z-50 px-20 py-10">
       <div className="flex items-center justify-between">
 
-        {/* Logo */}
-        <div className="text-5xl font-bold -ml-20">
+    
+        <div className="text-3xl font-bold -ml-20">
           A
         </div>
 
