@@ -24,94 +24,82 @@ subsets: ["latin"],
 });
 
 function AboutHeader() {
-return ( <header className="mb-8"> <p className="text-amber-500 text-sm uppercase tracking-[0.25em]">
-About </p>
+  return (
+    <header className="mb-8">
+      <p className="text-amber-500 text-sm uppercase tracking-[0.25em]">About</p>
 
-  <h2 className="text-4xl md:text-5xl font-bold mt-4">
-    Who I Am
-  </h2>
+      <h2 className="text-3xl md:text-4xl font-bold mt-4">Who I Am</h2>
 
-  <p
-  className={`${manrope.className} mt-5 max-w-3xl text-[17px] leading-8 text-gray-300`}
->
-  I’m a Computer Science student at{" "}
-  <a
-    href="https://cet.ac.in"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-amber-500 hover:text-amber-300 transition-colors"
-  >
-    CET Trivandrum
-  </a>{" "}
-  passionate about software development and problem solving. I enjoy
-  building full-stack applications and exploring the fundamentals of
-  computer science.
-</p>
-</header>
+      <p className={`${manrope.className} mt-5 max-w-3xl text-base md:text-lg leading-8 text-gray-300`}>
+        I’m a Computer Science student at{" "}
+        <a
+          href="https://cet.ac.in"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-amber-500 hover:text-amber-300 transition-colors"
+        >
+          CET Trivandrum
+        </a>{" "}
+        passionate about software development and problem solving. I enjoy
+        building full-stack applications and exploring the fundamentals of
+        computer science.
+      </p>
+    </header>
   );
 }
 
 function AboutContent() {
-return (
-<div
-className={`${manrope.className} space-y-5 text-[15px] leading-7 text-gray-300`}
-> <p>
-My interests span web development, software engineering, and backend
-systems. I focus on building practical projects while strengthening my
-technical foundations. </p>
+  return (
+    <div className={`${manrope.className} space-y-5 text-sm leading-7 text-gray-300`}>
+      <p>
+        My interests span web development, software engineering, and backend
+        systems. I focus on building practical projects while strengthening my
+        technical foundations.
+      </p>
 
-  <p>
-    I enjoy creating maintainable software with clean architecture,
-    reusable components, and thoughtful implementation details.
-  </p>
-</div>
-
-
-);
+      <p>
+        I enjoy creating maintainable software with clean architecture,
+        reusable components, and thoughtful implementation details.
+      </p>
+    </div>
+  );
 }
 
 
 
 function AboutCard() {
-return ( <aside className="flex flex-col items-center gap-5"> 
-  <div className="flex h-45 w-45 items-center justify-center rounded-full border border-gray-600 bg-gray-700/30"> <span className="text-4xl font-bold text-white">A</span> </div>
+  return (
+    <aside className="flex flex-col items-center gap-5">
+      <div className="flex h-24 w-24 items-center justify-center rounded-full border border-gray-600 bg-gray-700/30">
+        <span className="text-2xl md:text-4xl font-bold text-white">A</span>
+      </div>
 
-
-  <div className="text-center">
-    <p className="text-2xl font-semibold">Anand S</p>
-    <p className="text-sm text-gray-400">
-      Computer Science Student
-    </p>
-  </div>
-</aside>
-
-
-);
+      <div className="text-center">
+        <p className="text-xl md:text-2xl font-semibold">Anand S</p>
+        <p className="text-sm text-gray-400">Computer Science Student</p>
+      </div>
+    </aside>
+  );
 }
 
 export default function About() {
-return ( <section
-   id="about"
-   className="min-h-screen"
- > <div className="mx-auto w-full max-w-6xl px-8 py-20"> <AboutHeader />
+  return (
+    <section id="about" className="min-h-screen py-12 sm:py-16 md:py-20">
+      <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 md:px-8 lg:px-12">
+        <AboutHeader />
 
-
-    <div className="mt-10 grid gap-12 lg:grid-cols-3">
-        <div className="lg:col-span-2">
+        <div className="mt-10 grid gap-8 lg:grid-cols-3">
+          <div className="lg:col-span-2">
             <AboutContent />
+          </div>
+
+          <div className="lg:col-span-1 md:mt-0 mt-6">{/* optional card slot */}</div>
         </div>
 
-        <div className="lg:col-span-1 -mt-40">
-            <AboutCard />
+        <div className="mt-8 md:mt-12">
+          <GithubHeatmap />
         </div>
-        </div>
-
-        <div className="mt-20">
-        <GithubHeatmap />
-        </div>
-  </div>
-</section>
-
-
-);
+      </div>
+    </section>
+  );
 }

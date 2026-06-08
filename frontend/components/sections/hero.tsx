@@ -1,5 +1,3 @@
-
-import Socials from "@/components/ui/socials";
 import ScrollHint from "@/components/ui/scroll";
 import FullStack from "@/components/ui/fullstack";
 
@@ -7,38 +5,41 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen relative flex items-center justify-center"
+      className="relative flex min-h-screen items-center justify-center"
     >
-      {/* <Socials /> */}
+      <div className="w-full max-w-6xl px-6 md:px-10 lg:px-16">
+        <div className="flex flex-col items-center text-center">
 
-      <div className=" max-w-6xl px-8 ">
+          {/* Intro Row */}
+          <div className="mb-6 flex items-center gap-4 md:gap-8">
+            <p className="text-sm sm:text-base md:text-xl text-gray-400 tracking-widest">
+              Hi I am
+            </p>
 
-        {/* Intro Row */}
-        <div className="flex items-center gap-8 mb-10">
-          <p className="text-3xl text-gray-400 tracking-widest">
-            Hi I am
-          </p>
+            <div className="h-px w-12 sm:w-16 md:w-32 bg-amber-500" />
+          </div>
 
-          <div className="flex-1 h-[2px] bg-amber-500" />
+          {/* Name */}
+          <h1
+            className="
+              text-5xl
+              sm:text-6xl
+              md:text-8xl
+              lg:text-9xl
+              font-extrabold
+              leading-none
+              text-white
+            "
+          >
+            Anand
+          </h1>
+
+          {/* Subtitle */}
+          <div className="mt-4 md:mt-6">
+            <FullStack />
+          </div>
+
         </div>
-
-        {/* Name */}
-        <h1
-          className="
-            text-3xl
-            md:text-9xl
-            font-extrabold
-            leading-none
-          "
-        >
-          Anand
-        </h1>
-
-        {/* Subtitle */}
-        <div className="mt-8">
-          <FullStack />
-        </div>
-
       </div>
 
       <ScrollHint />

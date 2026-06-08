@@ -12,6 +12,46 @@ body {
 	margin: 0;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	background-color: gray-900;
+	background-color: #0f172a; /* Tailwind gray-900 */
 	color: #fff;
+}
+
+/* Make images and embeds responsive */
+img, video, iframe {
+	max-width: 100%;
+	height: auto;
+}
+
+/* Global responsive fixes for small screens (mobile-first) */
+@media (max-width: 640px) {
+	/* Reduce large horizontal paddings used by components */
+	[class*="px-14"] { padding-left: 1rem !important; padding-right: 1rem !important; }
+	[class*="px-8"]  { padding-left: 1rem !important; padding-right: 1rem !important; }
+
+	/* Ensure max width containers fit the viewport */
+	[class*="max-w-5xl"], [class*="max-w-4xl"], [class*="max-w-7xl"], [class*="max-w-2xl"] {
+		max-width: 100% !important;
+		padding-left: 0.5rem !important;
+		padding-right: 0.5rem !important;
+	}
+
+	/* Scale down very large headings for mobile */
+	.text-5xl { font-size: 1.6rem !important; line-height: 1.2 !important; }
+	.text-4xl { font-size: 1.25rem !important; line-height: 1.2 !important; }
+
+	/* Make buttons and inputs comfortable to tap */
+	input, textarea, button { font-size: 1rem !important; }
+
+	/* Stack any two-column layouts that used fixed lg/md classes */
+	.lg\:grid-cols-2, .md\:grid-cols-2 { grid-template-columns: 1fr !important; }
+
+	/* Reduce section vertical spacing */
+	section { padding-top: 2.5rem !important; padding-bottom: 2.5rem !important; }
+}
+
+/* Improve readability on medium screens */
+@media (min-width: 641px) and (max-width: 1024px) {
+	.text-5xl { font-size: 2rem !important; }
+	.text-4xl { font-size: 1.75rem !important; }
+	section { padding-top: 3rem !important; padding-bottom: 3rem !important; }
 }

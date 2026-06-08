@@ -15,8 +15,8 @@ export default function Skills() {
   ];
 
   return (
-    <section id="tech-stacks" className="py-10 px-14">
-      <div className="mx-0 max-w-6xl px-8 text-white">
+    <section id="tech-stacks" className="py-8 sm:py-10 px-4 sm:px-6 md:px-8 lg:px-14">
+      <div className="mx-0 max-w-6xl px-0 text-white">
         <div className="grid gap-6 lg:grid-cols-3 items-stretch">
           <div className="lg:col-span-2 flex flex-col">
             <h2 className="mb-3 text-4xl font-extrabold tracking-[-0.03em]">
@@ -49,7 +49,7 @@ export default function Skills() {
 
           <Link
             href="/blogs"
-            className="group flex h-full min-h-[320px] flex-col justify-between rounded-2xl border border-neutral-800 bg-neutral-950/30 p-8 transition-all duration-300 hover:border-amber-500/70 hover:bg-neutral-900/40"
+            className="group flex h-full min-h-[240px] sm:min-h-[280px] flex-col justify-between rounded-2xl border border-neutral-800 bg-neutral-950/30 p-6 sm:p-8 transition-all duration-300 hover:border-amber-500/70 hover:bg-neutral-900/40"
           >
             <div>
               <p className="font-mono text-sm uppercase tracking-[0.28em] text-gray-500">
