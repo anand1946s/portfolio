@@ -51,7 +51,7 @@ function AboutHeader() {
 function AboutContent() {
   return (
     <div className={`${manrope.className} space-y-5 text-sm leading-7 text-gray-300`}>
-      <p>
+      {/* <p>
         My interests span web development, software engineering, and backend
         systems. I focus on building practical projects while strengthening my
         technical foundations.
@@ -60,7 +60,7 @@ function AboutContent() {
       <p>
         I enjoy creating maintainable software with clean architecture,
         reusable components, and thoughtful implementation details.
-      </p>
+      </p> */}
     </div>
   );
 }

@@ -23,9 +23,8 @@ export default function Navbar() {
             left-4
             md:left-2
             top-1/2
-            bottom-0
+            bottom-5
             -translate-y-1/2
-            flex
             flex
             flex-row
             gap-8
@@ -35,7 +34,7 @@ export default function Navbar() {
           "
         >
           <a
-            href="YOUR_INSTAGRAM_LINK"
+            href="https://www.instagram.com/anand.__.s"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-amber-500 transition-colors"
@@ -44,7 +43,7 @@ export default function Navbar() {
           </a>
 
           <a
-            href="YOUR_LINKEDIN_LINK"
+            href="https://www.linkedin.com/in/anand1946s"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-amber-500 transition-colors"
