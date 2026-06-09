@@ -7,7 +7,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navItems = [
-    { name: "Resume", href: "#skills" },
+    { name: "Resume", href: "https://drive.google.com/file/d/1-iCvjzs_6MkMjAe91e2eaaWKoLfUOl22/view?usp=drivesdk" },
     { name: "Projects", href: "#projects" },
     { name: "Blogs", href: "/blogs" },
   ];
