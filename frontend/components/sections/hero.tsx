@@ -1,5 +1,7 @@
 import ScrollHint from "@/components/ui/scroll";
 import FullStack from "@/components/ui/fullstack";
+import { FaGithub } from "react-icons/fa";
+
 
 export default function Hero() {
   return (
@@ -29,6 +31,7 @@ export default function Hero() {
               font-extrabold
               leading-none
               text-white
+              tracking-wider
             "
           >
             Anand
@@ -41,6 +44,51 @@ export default function Hero() {
 
         </div>
       </div>
+
+      <a
+        href="https://github.com/YOUR_USERNAME"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="
+          absolute
+          bottom-8
+          right-6
+          md:right-10
+          lg:right-16
+
+          flex
+          items-center
+          gap-3
+
+          
+          
+         
+          
+
+          px-4
+          py-3
+
+          rounded-xl
+
+          text-gray-400
+          hover:text-amber-200
+          
+          
+
+          transition-all
+          duration-200
+        "
+      >
+
+        <span className="hidden sm:block tracking-wide">
+          My GitHub
+        </span>
+        <span className="text-2xl leading-none">↗</span>
+        {/* <FaGithub className="text-xl" /> */}
+
+        {/* Hidden on mobile */}
+        
+      </a>
 
       <ScrollHint />
     </section>
