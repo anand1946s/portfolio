@@ -12,7 +12,16 @@ export default function Contact() {
             Let&apos;s build something together
           </p>
 
-          <form className="mt-8">
+          <form
+            action="https://api.web3forms.com/submit"
+            method="POST"
+            className="mt-8"
+          >
+            <input
+              type="hidden"
+              name="access_key"
+              value={process.env.NEXT_PUBLIC_WEB3FORMS_KEY}
+            />
             <div className="grid gap-8 md:grid-cols-2">
               <div>
                 <label className="font-mono text-xs uppercase tracking-[0.3em] text-gray-500">
@@ -20,7 +29,12 @@ export default function Contact() {
                 </label>
 
                 <div className="mt-4 border border-neutral-800 transition-colors duration-300 focus-within:border-amber-400">
-                  <input type="text" className="w-full bg-transparent px-4 py-3 text-white outline-none" />
+                  <input
+                    name="name"
+                    type="text"
+                    required
+                    className="w-full bg-transparent px-4 py-3 text-white outline-none"
+                  />
                 </div>
               </div>
 
@@ -40,16 +54,18 @@ export default function Contact() {
                   "
                 >
                   <input
-                    type="text"
-                    className="
-                      w-full
-                      bg-transparent
-                      px-5
-                      py-5
-                      text-white
-                      outline-none
-                    "
-                  />
+                      name="email"
+                      type="email"
+                      required
+                      className="
+                        w-full
+                        bg-transparent
+                        px-5
+                        py-5
+                        text-white
+                        outline-none
+                      "
+                    />
                 </div>
               </div>
             </div>
@@ -60,12 +76,25 @@ export default function Contact() {
               </label>
 
               <div className="mt-4 border border-neutral-800 transition-colors duration-300 focus-within:border-amber-400">
-                <input type="text" className="w-full bg-transparent px-4 py-3 text-white outline-none" />
+                <textarea
+                  name="message"
+                  required
+                  rows={6}
+                  className="
+                    w-full
+                    bg-transparent
+                    px-4
+                    py-3
+                    text-white
+                    outline-none
+                    resize-none
+                  "
+                />
               </div>
             </div>
 
             <button
-              type="button"
+              type="submit"
               className="
                 mt-12
                 inline-flex

@@ -33,13 +33,29 @@ export default function Skills() {
               {stacks.map((stack) => (
                 <div
                   key={stack.title}
-                  className="group flex items-center justify-between border-b border-neutral-800 py-5 transition-all duration-200 last:border-b-0 hover:border-amber-500/70"
+                  className="
+                      group
+                      flex
+                      flex-col
+                      items-start
+                      gap-2
+                      md:flex-row
+                      md:items-center
+                      md:justify-between
+                      border-b
+                      border-neutral-800
+                      py-5
+                      transition-all
+                      duration-200
+                      last:border-b-0
+                      hover:border-amber-500/70
+                    "
                 >
-                  <h3 className="font-jetbrains text-lg font-normal text-white transition-colors duration-300 group-hover:text-amber-400">
+                  <h3 className="font-jetbrains text-base md:text-lg font-normal text-white ...">
                     {stack.title}
                   </h3>
 
-                  <div className="font-mono text-lg tracking-[0.08em] text-right text-gray-300">
+                  <div className="font-mono text-sm md:text-lg tracking-[0.04em] md:tracking-[0.08em] text-left md:text-right text-gray-300">
                     {stack.items.join(", ")}
                   </div>
                 </div>
