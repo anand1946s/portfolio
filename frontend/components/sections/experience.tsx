@@ -2,11 +2,11 @@ export default function Experience() {
   const milestones = [
     {
       year: "2024",
-      title: "Joined B.Tech @ CET",
+      title: "B.Tech @ CET",
     },
     {
       year: "2026",
-      title: "Summer Internship",
+      title: "Summer Intern @ NIT Calicut",
     },
     {
       year: "2028",

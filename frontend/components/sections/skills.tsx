@@ -8,9 +8,9 @@ const jetbrainsMono = JetBrains_Mono({
 export default function Skills() {
   const stacks = [
     { title: "Languages", items: ["Python", "C++", "JavaScript"] },
-    { title: "Frontend", items: ["React", "Next.js"] },
     { title: "Backend", items: ["FastAPI", "Flask"] },
-    { title: "Database & Cloud", items: ["PostgreSQL", "MongoDB"] },
+    { title: "Frontend", items: ["React", "Next.js"] },    
+    { title: "Database ", items: ["PostgreSQL", "MongoDB"] },
     { title: "ML and Data", items: ["Pytorch", "Numpy", " Matplotlib"] },
   ];
 
@@ -29,7 +29,7 @@ export default function Skills() {
               to learn.
             </p>
 
-            <div className="flex-1 rounded-2xl border border-neutral-800 bg-neutral-950/30 p-2">
+            <div className="flex-1 rounded-2xl border border-neutral-800 bg-neutral-950/30 p-4">
               {stacks.map((stack) => (
                 <div
                   key={stack.title}

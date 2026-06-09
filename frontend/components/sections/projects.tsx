@@ -93,90 +93,130 @@ export default async function Projects() {
   className="py-16 px-4 sm:px-6 md:px-12 lg:px-16"
 >
   <div className="mx-auto max-w-7xl">
-        <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-          <h2 className="text-4xl font-bold tracking-tight pl-7">
-            Pinned Projects
-          </h2>
+        <div className="mb-8 flex flex-row items-center justify-between">
+            <h2 className="text-2xl md:text-4xl font-bold tracking-tight pl-2 md:pl-7">
+              Pinned Projects
+            </h2>
 
-          <Link
-            href="https://github.com/anand1946s?tab=repositories"
-            target="_blank"
-            className="font-mono text-sm tracking-[0.25em] uppercase text-amber-400 hover:text-amber-300 transition"
-          >
-            View All Repositories ↗
-          </Link>
-        </div>
+            <Link
+              href="https://github.com/anand1946s?tab=repositories"
+              target="_blank"
+              className="
+                text-[10px]
+                md:text-sm
+                font-mono
+                tracking-[0.15em]
+                md:tracking-[0.25em]
+                uppercase
+                text-amber-400
+                hover:text-amber-300
+                transition
+                whitespace-nowrap
+              "
+            >
+              View Repos ↗
+            </Link>
+          </div>
 
-        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-2 xl:grid-cols-3 md:gap-8">
           {repos.map((repo) => (
             <Link
               key={repo.name}
               href={repo.url}
               target="_blank"
               className="
-                group
-                flex
-                flex-col
-                
-                border
-                border-neutral-800
-                bg-neutral-950/40
-                p-5
-                min-h-[340px]
-                transition-all
-                duration-300
-                hover:border-amber-500/70
-                
-              "
+                  group
+                  flex
+                  flex-col
+                  border
+                  border-neutral-800
+                  bg-neutral-950/40
+                  p-3
+                  md:p-5
+                  min-h-[140px]
+                  md:min-h-[340px]
+                  transition-all
+                  duration-300
+                  hover:border-amber-500/70
+                "
             >
-              <div className="flex items-center gap-3 mb-4">
-                <span className="text-amber-300 text-xl">📁</span>
+              {/* Mobile Layout */}
+                <div className="md:hidden flex flex-col h-full justify-between">
+                  <h3 className="text-sm font-semibold text-white line-clamp-2">
+                    {repo.name}
+                  </h3>
 
-                <h3 className="text-2xl font-semibold text-white group-hover:text-amber-400 transition">
-                  {repo.name}
-                </h3>
-              </div>
+                  <div className="mt-4 space-y-8 text-xs">
+                    <div className="flex items-center gap-2">
+                      <span
+                        className="h-3 w-3 rounded-full"
+                        style={{
+                          backgroundColor:
+                            languageColors[repo.language] ?? "#f59e0b",
+                        }}
+                      />
+                      <span>{repo.language}</span>
+                    </div>
 
-              <p className="font-mono text-gray-400 leading-8 flex-1">
-                {repo.description}
-              </p>
-
-              <div className="flex flex-wrap gap-2 my-8">
-                {repo.topics.map((topic) => (
-                  <span
-                    key={topic}
-                    className="
-                      border
-                      border-neutral-800
-                      px-3
-                      py-1
-                      text-xs
-                      font-mono
-                      uppercase
-                      tracking-wider
-                    "
-                  >
-                    {topic}
-                  </span>
-                ))}
-              </div>
-
-              <div className="flex items-center justify-between border-t border-neutral-800 pt-6 font-mono">
-                <div className="flex gap-6 text-gray-400">
-                  <div className="flex items-center gap-2">
-                    <span
-                      className="h-3 w-3"
-                      style={{
-                        backgroundColor:
-                          languageColors[repo.language] ?? "#f59e0b",
-                      }}
-                    />
-                    <span>{repo.language}</span>
+                    <div className="flex gap-3 text-gray-400">
+                      <span>★ {repo.stars}</span>
+                      <span>⑂ {repo.forks}</span>
+                    </div>
                   </div>
-                  <span>★ {repo.stars}</span>
-                  <span>⑂ {repo.forks}</span>
                 </div>
-              </div>
+
+                {/* Desktop Layout */}
+                <div className="hidden md:flex md:flex-col md:h-full">
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="text-amber-300 text-xl">📁</span>
+
+                    <h3 className="text-2xl font-semibold text-white group-hover:text-amber-400 transition">
+                      {repo.name}
+                    </h3>
+                  </div>
+
+                  <p className="font-mono text-gray-400 leading-8 flex-1">
+                    {repo.description}
+                  </p>
+
+                  <div className="flex flex-wrap gap-2 my-8">
+                    {repo.topics.map((topic) => (
+                      <span
+                        key={topic}
+                        className="
+                          border
+                          border-neutral-800
+                          px-3
+                          py-1
+                          text-xs
+                          font-mono
+                          uppercase
+                          tracking-wider
+                        "
+                      >
+                        {topic}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="flex items-center justify-between border-t border-neutral-800 pt-6 font-mono">
+                    <div className="flex gap-6 text-gray-400">
+                      <div className="flex items-center gap-2">
+                        <span
+                          className="h-3 w-3"
+                          style={{
+                            backgroundColor:
+                              languageColors[repo.language] ?? "#f59e0b",
+                          }}
+                        />
+                        <span>{repo.language}</span>
+                      </div>
+
+                      <span>★ {repo.stars}</span>
+                      <span>⑂ {repo.forks}</span>
+                    </div>
+                  </div>
+                </div>
             </Link>
           ))}
         </div>

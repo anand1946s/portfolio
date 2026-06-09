@@ -95,25 +95,29 @@ export default function Hero() {
         rel="noopener noreferrer"
         className="
           absolute
-          bottom-8
+          bottom-16
+          md:bottom-8
           right-6
           md:right-10
           lg:right-16
           flex
           items-center
-          gap-3         
-          px-4
-          py-3
+          gap-2
+          md:gap-3
+          px-3
+          md:px-4
+          py-2
+          md:py-3
           rounded-xl
           text-gray-400
-          hover:text-amber-200      
+          hover:text-amber-200
           transition-all
           duration-200
         "
       >
 
-        <span className="hidden sm:block tracking-wide">
-          My GitHub
+        <span className="tracking-wide text-sm md:text-base">
+          My Github
         </span>
         {/* <span className="text-2xl leading-none">↗</span> */}
         <FaGithub className="text-xl" />

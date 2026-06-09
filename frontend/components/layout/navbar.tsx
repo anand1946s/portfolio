@@ -9,7 +9,7 @@ export default function Navbar() {
   const navItems = [
     { name: "Resume", href: "#skills" },
     { name: "Projects", href: "#projects" },
-    { name: "Blogs", href: "#contact" },
+    { name: "Blogs", href: "/blogs" },
   ];
 
   return (
