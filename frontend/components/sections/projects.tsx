@@ -70,18 +70,28 @@ async function getPinnedRepos(): Promise<Repo[]> {
     next: { revalidate: 3600 },
   });
 
-  const json = await res.json();
+  try {
+    const json = await res.json();
 
-  return json.data.user.pinnedItems.nodes.map((repo: any) => ({
-    name: repo.name,
-    description: repo.description ?? "No description",
-    url: repo.url,
-    stars: repo.stargazerCount,
-    forks: repo.forkCount,
-    language: repo.primaryLanguage?.name ?? "Unknown",
-    topics:
-      repo.repositoryTopics.nodes.map((t: any) => t.topic.name) ?? [],
-  }));
+    if (!json?.data?.user?.pinnedItems?.nodes) {
+      console.warn("Could not fetch pinned repos. Check GITHUB_TOKEN environment variable.");
+      return [];
+    }
+
+    return json.data.user.pinnedItems.nodes.map((repo: any) => ({
+      name: repo.name,
+      description: repo.description ?? "No description",
+      url: repo.url,
+      stars: repo.stargazerCount,
+      forks: repo.forkCount,
+      language: repo.primaryLanguage?.name ?? "Unknown",
+      topics:
+        repo.repositoryTopics.nodes.map((t: any) => t.topic.name) ?? [],
+    }));
+  } catch (error) {
+    console.error("Failed to parse pinned repos:", error);
+    return [];
+  }
 }
 
 export default async function Projects() {
