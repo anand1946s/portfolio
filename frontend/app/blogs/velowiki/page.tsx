@@ -88,15 +88,15 @@ export default function VeloWikiBlog() {
         <article className="prose prose-invert max-w-none font-sans text-neutral-300 leading-relaxed space-y-8">
 
           <section className="space-y-4">
-            <h2 className="text-2xl font-bold text-white tracking-tight">Why We Built This</h2>
+            <h2 className="text-2xl font-bold text-white tracking-tight">Why I Built This</h2>
             <p>
               As my club VeloCET, grew in members and projects, a simple Google sheet was no longer an option
               to track members,project status,active members, club alumni and industry connections. A need for a
-              custom database catering to our needs was imminent. Although i explored other open source alternatives,
-              they were too feature-rich or too complex for our needs. I decided to come up with my own solution
+              custom database catering to my club's needs was imminent. Although i explored other open source alternatives,
+              they were too feature-rich or too complex for my needs. I decided to come up with my own solution
             </p>
             <p>
-              I decided to build a custom tool called <strong>VeloWiKi</strong>. Our main
+              I decided to build a custom tool called <strong>VeloWiKi</strong>. My main
               goal was to create a secure, reliable dashboard where coordinators can quickly view
               everyone's details, assign members to projects, and keep data clean.
             </p>
@@ -119,7 +119,7 @@ export default function VeloWikiBlog() {
                   </div>
                   <h4 className="font-bold text-white font-mono text-sm uppercase tracking-wide">Next.js Web Portal</h4>
                   <p className="text-xs text-neutral-400 mt-2 font-sans">
-                    Our primary interface. It handles lists of club members, project boards, and admin tools behind a secure login.
+                    My primary interface. It handles lists of club members, project boards, and admin tools behind a secure login.
                   </p>
                 </div>
               </div>
@@ -158,8 +158,8 @@ export default function VeloWikiBlog() {
           <section className="space-y-4">
             <h2 className="text-2xl font-bold text-white tracking-tight">Database Layout</h2>
             <p>
-              We designed the database to track active members, mentors, and graduates cleanly.
-              Here is a look at our main tables. It may not be normalised and scalable for a big setup.but yea,
+              I designed the database to track active members, mentors, and graduates cleanly.
+              Here is a look at the main tables. It may not be normalised and scalable for a big setup.but yea,
               for the club this seemed almost good (Atleast for a few years).
             </p>
 
@@ -204,8 +204,8 @@ export default function VeloWikiBlog() {
 
             <p className="text-sm">
               By splitting profiles (<code>persons</code>) from their start/end dates (<code>memberships</code>),
-              we can keep contact details clean. If a student graduates, we change their type to <code>ALUMNI</code>
-              and set their end date, but we do not lose their history or project connections.
+              I can keep contact details clean. If a student graduates, I change their type to <code>ALUMNI</code>
+              and set their end date, without losing their history or project connections.
             </p>
           </section>
 
@@ -214,11 +214,11 @@ export default function VeloWikiBlog() {
             <h2 className="text-2xl font-bold text-white tracking-tight">FastAPI Backend API</h2>
             <p>
               I built the backend API using Python and <strong>FastAPI</strong>. It is simple, fast, and
-              gives us auto-generated documentation endpoints out of the box.
+              gives auto-generated documentation endpoints out of the box.
             </p>
             <p>
               When a user signs in on the website, Next.js checks their credentials by sending a request
-              to this backend endpoint to verify if their email exists in our user database table:
+              to this backend endpoint to verify if their email exists in the user database table:
             </p>
 
             <div className="bg-neutral-950 border border-neutral-800 rounded-lg p-4 font-mono text-xs overflow-x-auto text-amber-200">
@@ -236,12 +236,12 @@ export default function VeloWikiBlog() {
           <section className="space-y-4">
             <h2 className="text-2xl font-bold text-white tracking-tight">Next.js Web Portal & Google Login</h2>
             <p>
-              The web app is the center of our project. The reason i choose Next.js is for its fast response and SSR
+              The web app is the center of my project. The reason i choose Next.js is for its fast response and SSR
               which drastically improvd speed and providing a good user experience.
             </p>
             <p>
-              We used <strong>NextAuth.js</strong> to set up Google login. When someone signs in with their
-              Google account, Next.js calls our FastAPI backend behind the scenes to verify if their email
+              I used <strong>NextAuth.js</strong> to set up Google login. When someone signs in with their
+              Google account, Next.js calls the FastAPI backend behind the scenes to verify if their email
               is listed in the <code>users</code> database table. If they are in the database, they get a
               token containing their role (either <code>admin</code> or <code>viewer</code>). If not,
               they are immediately signed out and shown an access denied message.
@@ -294,25 +294,25 @@ export default function VeloWikiBlog() {
               <li>
                 <strong>CORS Policies & Environment Variables:</strong> When I deployed the frontend to Vercel and
                 the backend to Render, they couldn't talk to each other. I had to learn how CORS headers work to allow
-                requests between our domains, and ensure Vercel was pointing to the production Render URL instead of
+                requests between the domains, and ensure Vercel was pointing to the production Render URL instead of
                 <code>localhost:8000</code>. Me and Gemini spend almost half an hour until i realised the local address alone added to the CORS.
               </li>
               <li>
                 <strong>OAuth & NextAuth Misconfigurations:</strong> Configuring Google OAuth for the first time
                 meant dealing with redirect URI mismatch errors. Getting the authentication flow to correctly query
-                our database and fetch the whitelisted emails took some troubleshooting.
+                the database and fetch the whitelisted emails took some troubleshooting.
               </li>
             </ul>
           </section>
 
           {/* Conclusion */}
           <section className="space-y-4 pt-4 border-t border-neutral-800">
-            <h2 className="text-2xl font-bold text-white tracking-tight">What We Learned</h2>
+            <h2 className="text-2xl font-bold text-white tracking-tight">What I Learned</h2>
             <p>
               Building VeloWiKi was a great exercise in full-stack development. By setting up a robust,
-              well-structured PostgreSQL database and a fast backend api, we were able to build a secure,
-              responsive dashboard that handles our club's records cleanly. Keeping the focus on the Next.js
-              web application allowed us to polish features and keep the interface simple and easy for everyone to use.
+              well-structured PostgreSQL database and a fast backend api, I was able to build a secure,
+              responsive dashboard that handles the club's records cleanly. Keeping the focus on the Next.js
+              web application allowed me to polish features and keep the interface simple and easy for everyone to use.
             </p>
           </section>
 
